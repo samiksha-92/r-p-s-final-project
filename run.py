@@ -11,6 +11,7 @@ def display_rules():
     rules = """
 
     Hi There! 
+
     Game rules are :
     
     - Rock smashes scissors 
@@ -18,7 +19,13 @@ def display_rules():
     - Scissors cut paper.
 
     """
-    print(rules)
+    
+
+def get_computer_move():
+    """
+    This function randomly selects a value from this list
+    """
+    computer_move = random.choice(['rock','paper','scissors '])    
+    return computer_move
 
 
-display_rules()
