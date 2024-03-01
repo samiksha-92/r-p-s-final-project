@@ -29,3 +29,28 @@ def get_computer_move():
     return computer_move
 
 
+def get_your_move():
+    """
+    This function will ask user for an input and validate if the input is valid.
+    """
+    while True:
+        your_move = input("Choose between rock, paper or scissors")
+        list = ["rock","paper","scissors"]
+
+        if not your_move:
+            print("Invalid answer, please give an answer")
+        elif your_move not in list:
+            print("Invalid answer, please read the game rules again")
+        else:
+            return your_move    
+
+def validate_moves (your_move,computer_move):
+    """
+    This function validates moves fo both computer and user.
+    """
+    list_1 = ["rock","paper","scissors"]
+    if your_move not in list_1 or computer_move not in list_1:
+        raise ValueError('Invalid input')
+
+
+
