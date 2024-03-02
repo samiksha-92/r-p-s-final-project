@@ -52,5 +52,15 @@ def validate_moves (your_move,computer_move):
     if your_move not in list_1 or computer_move not in list_1:
         raise ValueError('Invalid input')
 
+def display_results(your_move,computer_move):
+    result = ""
+    
+    if your_move ==computer_move:
+        print("It's a tie")
+    elif (player_move == "rock" and computer_move == "scissors") or (player_move == "paper" and computer_move == "rock") or  elif(player_move == "scissors" and computer_move == "paper"):
+        print("")
+    
+
+
 
 
