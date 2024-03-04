@@ -57,8 +57,49 @@ def display_results(your_move,computer_move):
     
     if your_move ==computer_move:
         print("It's a tie")
-    elif (player_move == "rock" and computer_move == "scissors") or (player_move == "paper" and computer_move == "rock") or  elif(player_move == "scissors" and computer_move == "paper"):
-        print("")
+    elif (your_move == "rock" and computer_move == "scissors") or (your_move == "paper" and computer_move == "rock") or  elif(your_move == "scissors" and computer_move == "paper"):
+        result = f"Congratulations, you win! {your_move.capitalize()} beats {computer_move.capitalize()}"
+    else:
+        result = f"Oops,You lost! {computer_move.capitalize()} beats {your_move.capitalize()}"
+
+    return result
+    print(result)
+
+
+def game_flow():
+    """
+    This function executes the game flow and includes helper functions declared above
+    """
+
+    display_rules()
+
+    Opponent_move = get_computer_move()
+
+    player_move = get_your_move()
+
+    validate_moves(Opponent_move,player_move)
+
+    display_results(Opponent_move,player_move)
+
+    return Opponent_move, player_move
+
+
+def main():
+    """
+    This function keeps track of scores
+    """
+
+    #Initialisation of scores
+
+    computer_wins = 0
+    player_wins = 0
+    tie_score = 0    
+
+
+    
+
+
+
     
 
 
