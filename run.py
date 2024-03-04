@@ -81,7 +81,7 @@ def game_flow():
 
     display_results(Opponent_move,player_move)
 
-    return Opponent_move, player_move
+    return Opponent_move,player_move
 
 
 def main():
@@ -95,8 +95,35 @@ def main():
     player_wins = 0
     tie_score = 0    
 
+ # Starting game loop
+   while True:
+      Opponent_move,player_move = game_flow()
+
+   #updating scores
+    if computer_move == player_move:
+        tie_score += 1
+    elif (player_move == "rock" and Opponent_move == "scissors") or (player_move == "paper" and Opponent_move == "rock") or (player_move == "scissors" and Opponent_move_move == "paper"):
+        player_wins += 1
+    else:
+        computer_wins += 1
+
+   #Displaying results
+
+   print(f"\nScores - Computer: {computer_wins}, Player: {player_wins}, Tie: {tie_score}\n")
+")
+    #Asking if player wants to play again
+    wanna_play_again = input("Do you wanna play again? Press Y for Yes.")
+    if wanna_play_again.lower()! = 'y':
+        print("Thanks for playing with us today, See you soon")
+        break
+
 
     
+
+
+
+main()
+
 
 
 
