@@ -8,17 +8,15 @@ The command to import random module for functions
 """
 
 def display_rules():
-    rules = """
+    rules = "Hi There, Game rules are: Rock smashes scissors, Paper covers rock & Scissors cut paper"
 
-    Hi There! 
+    print(rules)
 
-    Game rules are :
+
     
-    - Rock smashes scissors 
-    - Paper covers rock
-    - Scissors cut paper.
 
-    """
+    
+    
     
 
 def get_computer_move():
@@ -44,26 +42,25 @@ def get_your_move():
         else:
             return your_move    
 
-def validate_moves (your_move,computer_move):
+#def validate_moves (your_move,computer_move):
     """
     This function validates moves fo both computer and user.
     """
-    list_1 = ["rock","paper","scissors"]
-    if your_move not in list_1 or computer_move not in list_1:
-        raise ValueError('Invalid input')
+    #list_1 = ["rock","paper","scissors"]
+   # if your_move not in list_1 or computer_move not in list_1:
+       # raise ValueError('Invalid input')
 
 def display_results(your_move,computer_move):
-    result = ""
     
     if your_move ==computer_move:
-        print("It's a tie")
-    elif (your_move == "rock" and computer_move == "scissors") or (your_move == "paper" and computer_move == "rock") or  elif(your_move == "scissors" and computer_move == "paper"):
-        result = f"Congratulations, you win! {your_move.capitalize()} beats {computer_move.capitalize()}"
+        print("Its a tie")
+    elif (your_move == "rock" and computer_move == "scissors") or (your_move == "paper" and computer_move == "rock") or (your_move == "scissors" and computer_move == "paper"):
+        print (f"Congratulations, you win! {your_move.capitalize()} beats {computer_move.capitalize()}")
     else:
-        result = f"Oops,You lost! {computer_move.capitalize()} beats {your_move.capitalize()}"
+        print (f"You lost! {computer_move.capitalize()} beats {your_move.capitalize()}")
 
-    return result
-    print(result)
+
+    
 
 
 def game_flow():
@@ -77,7 +74,7 @@ def game_flow():
 
     player_move = get_your_move()
 
-    validate_moves(Opponent_move,player_move)
+    #validate_moves(Opponent_move,player_move)
 
     display_results(Opponent_move,player_move)
 
@@ -96,26 +93,25 @@ def main():
     tie_score = 0    
 
  # Starting game loop
-   while True:
+    while True:
       Opponent_move,player_move = game_flow()
 
    #updating scores
-    if computer_move == player_move:
+      if Opponent_move == player_move:
         tie_score += 1
-    elif (player_move == "rock" and Opponent_move == "scissors") or (player_move == "paper" and Opponent_move == "rock") or (player_move == "scissors" and Opponent_move_move == "paper"):
+      elif (player_move == "rock" and Opponent_move == "scissors") or (player_move == "paper" and Opponent_move == "rock") or (player_move == "scissors" and Opponent_move == "paper"):
         player_wins += 1
-    else:
+      else:
         computer_wins += 1
 
    #Displaying results
 
-   print(f"\nScores - Computer: {computer_wins}, Player: {player_wins}, Tie: {tie_score}\n")
-")
+      print(f"\nScores - Computer: {computer_wins}, Player: {player_wins}, Tie: {tie_score}\n")
+
     #Asking if player wants to play again
-    wanna_play_again = input("Do you wanna play again? Press Y for Yes.")
-    if wanna_play_again.lower()! = 'y':
-        print("Thanks for playing with us today, See you soon")
-        break
+      wanna_play_again = input("Enter any key to play another round or press q to quit\n")
+      if wanna_play_again == 'q':
+         break
 
 
     
