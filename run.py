@@ -13,17 +13,11 @@ def display_rules():
     print(rules)
 
 
-    
-
-    
-    
-    
-
 def get_computer_move():
     """
     This function randomly selects a value from this list
     """
-    computer_move = random.choice(['rock','paper','scissors '])    
+    computer_move = random.choice(['rock','paper','scissors'])    
     return computer_move
 
 
@@ -32,7 +26,7 @@ def get_your_move():
     This function will ask user for an input and validate if the input is valid.
     """
     while True:
-        your_move = input("Choose between rock, paper or scissors")
+        your_move = input("Choose between rock, paper or scissors: ")
         list = ["rock","paper","scissors"]
 
         if not your_move:
@@ -42,13 +36,6 @@ def get_your_move():
         else:
             return your_move    
 
-#def validate_moves (your_move,computer_move):
-    """
-    This function validates moves fo both computer and user.
-    """
-    #list_1 = ["rock","paper","scissors"]
-   # if your_move not in list_1 or computer_move not in list_1:
-       # raise ValueError('Invalid input')
 
 def display_results(your_move,computer_move):
     
@@ -59,8 +46,6 @@ def display_results(your_move,computer_move):
     else:
         print (f"You lost! {computer_move.capitalize()} beats {your_move.capitalize()}")
 
-
-    
 
 
 def game_flow():
@@ -99,10 +84,13 @@ def main():
    #updating scores
       if Opponent_move == player_move:
         tie_score += 1
+        print("Its a Tie")
       elif (player_move == "rock" and Opponent_move == "scissors") or (player_move == "paper" and Opponent_move == "rock") or (player_move == "scissors" and Opponent_move == "paper"):
-        player_wins += 1
+         player_wins += 1
+         #print("Congratulations! you won this round")
       else:
         computer_wins += 1
+        #print("Unfortunately computer won this round")
 
    #Displaying results
 
