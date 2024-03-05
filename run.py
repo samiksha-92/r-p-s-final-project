@@ -17,7 +17,7 @@ def get_computer_move():
     """
     This function randomly selects a value from this list
     """
-    computer_move = random.choice(['rock','paper','scissors'])    
+    computer_move = random.choice(['rock','paper','scissors'])   
     return computer_move
 
 
@@ -37,7 +37,7 @@ def get_your_move():
             return your_move    
 
 
-def display_results(your_move,computer_move):
+def display_results(computer_move,your_move):
     
     if your_move ==computer_move:
         print("Its a tie")
@@ -59,7 +59,6 @@ def game_flow():
 
     player_move = get_your_move()
 
-    #validate_moves(Opponent_move,player_move)
 
     display_results(Opponent_move,player_move)
 
@@ -84,13 +83,14 @@ def main():
    #updating scores
       if Opponent_move == player_move:
         tie_score += 1
-        print("Its a Tie")
+        #hprint("Its a Tie")
       elif (player_move == "rock" and Opponent_move == "scissors") or (player_move == "paper" and Opponent_move == "rock") or (player_move == "scissors" and Opponent_move == "paper"):
          player_wins += 1
-         #print("Congratulations! you won this round")
+         print(f"Computer selected {Opponent_move.capitalize()}\n")
       else:
         computer_wins += 1
-        #print("Unfortunately computer won this round")
+        print()
+        print(f"Computer selected {Opponent_move.capitalize()}\n")
 
    #Displaying results
 
@@ -99,7 +99,10 @@ def main():
     #Asking if player wants to play again
       wanna_play_again = input("Enter any key to play another round or press q to quit\n")
       if wanna_play_again == 'q':
-         break
+        print("Thanks for playing, Goodbye!")
+        break
+
+      
 
 
     
