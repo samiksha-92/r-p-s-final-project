@@ -83,7 +83,7 @@ def main():
    #updating scores
       if Opponent_move == player_move:
         tie_score += 1
-        #hprint("Its a Tie")
+        print(f"Computer selected {Opponent_move.capitalize()}\n")
       elif (player_move == "rock" and Opponent_move == "scissors") or (player_move == "paper" and Opponent_move == "rock") or (player_move == "scissors" and Opponent_move == "paper"):
          player_wins += 1
          print(f"Computer selected {Opponent_move.capitalize()}\n")
