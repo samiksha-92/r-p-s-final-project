@@ -41,3 +41,5 @@ These functions encapsulate specific tasks within the game and help to organize 
 3. **Tie**: If both the player and the computer select the same move, the game will declare a tie.
 4. **Case Sensitivity**: Input is case-sensitive. "rock", "Rock", and "ROCK" are considered different inputs.
 5. **Quitting**: During the game, if the player enters 'q' when asked if they want to play another round, the game will terminate.
+
+### Testing 

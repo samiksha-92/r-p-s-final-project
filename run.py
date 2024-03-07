@@ -26,7 +26,7 @@ def get_your_move():
     This function will ask user for an input and validate if the input is valid.
     """
     while True:
-        your_move = input("Choose between rock, paper or scissors: ")
+        your_move = input("Choose between rock, paper or scissors:\n")
         list = ["rock","paper","scissors"]
 
         if not your_move:
