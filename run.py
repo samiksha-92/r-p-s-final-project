@@ -6,10 +6,8 @@ import random
 """
 The command to import random module for functions
 """
-
 def display_rules():
     rules = "Hi There, Game rules are: Rock smashes scissors, Paper covers rock & Scissors cut paper"
-
     print(rules)
 
 
@@ -17,7 +15,7 @@ def get_computer_move():
     """
     This function randomly selects a value from this list
     """
-    computer_move = random.choice(['rock','paper','scissors'])   
+    computer_move = random.choice(['rock', 'paper', 'scissors'])   
     return computer_move
 
 
@@ -27,7 +25,7 @@ def get_your_move():
     """
     while True:
         your_move = input("Choose between rock, paper or scissors:\n")
-        list = ["rock","paper","scissors"]
+        list = ["rock", "paper", "scissors"]
 
         if not your_move:
             print("Invalid answer, please give an answer")
@@ -37,15 +35,13 @@ def get_your_move():
             return your_move    
 
 
-def display_results(computer_move,your_move):
-    
-    if your_move ==computer_move:
+def display_results(computer_move,your_move):  
+    if your_move == computer_move:
         print("Its a tie")
     elif (your_move == "rock" and computer_move == "scissors") or (your_move == "paper" and computer_move == "rock") or (your_move == "scissors" and computer_move == "paper"):
-        print (f"Congratulations, you win! {your_move.capitalize()} beats {computer_move.capitalize()}")
+        print(f"Congratulations, you win! {your_move.capitalize()} beats {computer_move.capitalize()}")
     else:
-        print (f"You lost! {computer_move.capitalize()} beats {your_move.capitalize()}")
-
+        print(f"You lost! {computer_move.capitalize()} beats {your_move.capitalize()}")
 
 
 def game_flow():
@@ -58,7 +54,6 @@ def game_flow():
     Opponent_move = get_computer_move()
 
     player_move = get_your_move()
-
 
     display_results(Opponent_move,player_move)
 
@@ -80,7 +75,7 @@ def main():
     while True:
       Opponent_move,player_move = game_flow()
 
-   #updating scores
+   #Updating scores
       if Opponent_move == player_move:
         tie_score += 1
         print(f"Computer selected {Opponent_move.capitalize()}\n")
@@ -93,7 +88,6 @@ def main():
         print(f"Computer selected {Opponent_move.capitalize()}\n")
 
    #Displaying results
-
       print(f"\nScores - Computer: {computer_wins}, Player: {player_wins}, Tie: {tie_score}\n")
 
     #Asking if player wants to play again
@@ -103,12 +97,6 @@ def main():
         break
 
       
-
-
-    
-
-
-
 main()
 
 
