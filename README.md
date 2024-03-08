@@ -43,3 +43,20 @@ These functions encapsulate specific tasks within the game and help to organize 
 5. **Quitting**: During the game, if the player enters 'q' when asked if they want to play another round, the game will terminate.
 
 ### Testing 
+
+The manual testing for the the app was done in the following ways :
+1. **Testing for Empty Input** :
+<img src = "assets/Empty User Input Handling.png">
+
+2. **Testing for Invalid Input** :
+<img src = "assets/Error Handling.png">
+
+3. **Testing for function i.e get_computer_move** :
+<p> Here the logic was tested to prove the function provides random choice by running the function in isolation for 10 consecutive times. </p>
+
+<img src = "assets/testing computer move.png"
+
+4. **Testing for Score** :
+<p> Here the testing was done to ensure scores are getting incremented correctly for player or computer based on the choices made.
+
+<img src = "assets/Scores Displayed.png">
