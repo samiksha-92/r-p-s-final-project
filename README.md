@@ -60,3 +60,44 @@ The manual testing for the the app was done in the following ways :
 <p> Here the testing was done to ensure scores are getting incremented correctly for player or computer based on the choices made.
 
 <img src = "assets/Scores Displayed.png">
+
+### Bugs
+
+There were various bugs in the game but thankfully now the game runs bug free in the production.
+
+Major bugs were:
+
+1. When the player won the round, the computer score was getting incremented :
+ The arguments were passed to the function display_results() in the wrong order as a result the code was executing wrongly.
+ 
+ 2. The break statement for exiting the game was breaking the game at the wrong time due to poor use of the break statement.
+
+ 3. Indentation errors while writing the  function game_flow() was returning an error.
+
+ 4. Declaring the variable Opponent_move but using it as "opponent_move" was giving an error on line 81.
+
+ 5. The results after passing the code throught python linter is : 
+
+ <img src  = "assets/Errors.png">
+
+ This project was deployed using Code Institute's mock terminal for Heroku, wish was provided by the code institute python-essentials-template.
+
+
+### Deployment
+
+Steps taken for deployment:
+
+1. Create a new Heroku app
+2. added config var(PORT, 8000)
+3. Set the buildbacks to Python and NodeJS in that order
+4. Link the Heroku app to the the Github repository (https://github.com/samiksha-92/r-p-s-final-project)
+5. Enabled manual deployment from main branch
+6. Click on Deploy
+
+## Credits
+
+1. I would like to thank my mentor Mr. Jack Wachira for challenging me to think about various aspects of the game and building a better game.
+2.  I would like to thank my husband Mr. Dushyant Sabharwal for his support and inputs/feedback on the game which also led to a better outcome.
+3.  Also, thankyou to realpython.com from where I understood the flow of the game. 
+4.  All the code for this game is written solely by me. 
+5. CI Assessors who provided a detailed assessment on where the project lacked depth.

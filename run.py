@@ -3,6 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 import random 
+
 """
 The command to import random module for functions
 """
@@ -48,16 +49,15 @@ def game_flow():
     """
     This function executes the game flow and includes helper functions declared above
     """
-
     display_rules()
 
     Opponent_move = get_computer_move()
 
     player_move = get_your_move()
 
-    display_results(Opponent_move,player_move)
+    display_results(Opponent_move, player_move)
 
-    return Opponent_move,player_move
+    return Opponent_move, player_move
 
 
 def main():
@@ -70,7 +70,6 @@ def main():
     computer_wins = 0
     player_wins = 0
     tie_score = 0    
-
  # Starting game loop
     while True:
       Opponent_move,player_move = game_flow()
@@ -98,12 +97,5 @@ def main():
 
       
 main()
-
-
-
-
-    
-
-
 
 
