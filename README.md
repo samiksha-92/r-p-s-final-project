@@ -61,6 +61,11 @@ The manual testing for the the app was done in the following ways :
 
 <img src = "assets/Scores Displayed.png">
 
+5. **Testing for Exiting Game** :
+<p> Here testing was done to ensure exiting from the game is possible for the user and the user is shown a goodbye message.
+
+<img src = "assets/Exit game.png">
+
 ### Bugs
 
 There were various bugs in the game but thankfully now the game runs bug free in the production.
