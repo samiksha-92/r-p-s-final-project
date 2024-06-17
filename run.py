@@ -28,11 +28,11 @@ def get_your_move():
     This function will ask user for an input and validate
     """
     while True:
-        your_move = input("Choose between rock, paper or scissors:\n")
+        your_move = input("Choose between rock, paper or scissors:\n").lower()
         options = ["rock", "paper", "scissors"]
 
         if not your_move:
-            print("Invalid answer, please give an answer")
+            print("No answer given, please give an answer")
         elif your_move not in options:
             print("Invalid answer, please read the game rules again")
         else:
