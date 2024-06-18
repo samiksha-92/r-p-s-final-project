@@ -39,18 +39,22 @@ These functions encapsulate specific tasks within the game and help to organize 
 1. **Empty Input**: If the player enters nothing when prompted for their move, they will be asked to provide an answer.
 2. **Invalid Input**: If the player enters an invalid move (anything other than rock, paper, or scissors), they will be prompted to read the game rules again.
 3. **Tie**: If both the player and the computer select the same move, the game will declare a tie.
-4. **Case Sensitivity**: Input is case-sensitive. "rock", "Rock", and "ROCK" are considered different inputs.
+4. **Case Sensitivity**: Input is not case-sensitive. "rock", "Rock", and "ROCK" are considered same inputs.
 5. **Quitting**: During the game, if the player enters 'q' when asked if they want to play another round, the game will terminate.
 
 ### Testing 
 
 The manual testing for the the app was done in the following ways :
-1. **Testing for Empty Input** :
-<img src = "assets/Empty User Input Handling.png">
+1. 1. **Testing for Game Initialisation** :
+<img src = "assets/gamestart.png">
 
-2. **Testing for Invalid Input** :
+2. **Testing for Empty Input** :
+<img src = "assets/no input.png">
+
+3. **Testing for Invalid Input** :
 <img src = "assets/Error Handling.png">
-
+<img src = "assets/invalid answer.png">
+<img src = "assets/More Error Handling.png">
 3. **Testing for function i.e get_computer_move** :
 <p> Here the logic was tested to prove the function provides random choice by running the function in isolation for 10 consecutive times. </p>
 
