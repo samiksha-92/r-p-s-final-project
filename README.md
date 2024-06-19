@@ -87,7 +87,7 @@ Major bugs were:
 
  5. The results after passing the code throught python linter is : 
 
- <img src  = "assets/Errors.png">
+ <img src  = "assets/r-p-s.png">
 
  This project was deployed using Code Institute's mock terminal for Heroku, wish was provided by the code institute python-essentials-template.
 
